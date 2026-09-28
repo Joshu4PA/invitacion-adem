@@ -236,33 +236,20 @@
   .detail-text .value{ font-size:13px; font-weight:800; color:#ffffff; line-height:1.25; }
   .detail-text .ref{ font-size:10px; color:#94a3b8; margin-top:1px; font-style:italic; font-weight:600; }
 
-  /* ---------- MAPA INTEGRADO Y EN MODO OSCURO ---------- */
+  /* ---------- CONTENEDOR DEL MAPA (CON MARCO) ---------- */
   .map-container{
     margin-top:8px;
-    background: rgba(30, 41, 59, 0.75);
-    border-radius:14px;
-    padding:8px;
-    border:1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 1px 3px rgba(255,255,255,0.1), 0 4px 15px rgba(0,0,0,0.4);
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.15);
     opacity:0; animation: fadeUp 0.6s ease 1.55s forwards;
-    text-align: left;
-  }
-  .map-header{
-    font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#94a3b8; font-weight:800; margin-bottom:5px; padding-left:4px;
-    display: flex; align-items: center; gap: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
   }
   .map-container iframe{
     width:100%;
     height:130px;
-    border-radius: 10px;
     border:0;
     display:block;
-    /* Filtro para adaptar Google Maps al diseño oscuro de la tarjeta */
-    filter: invert(90%) hue-rotate(180deg) contrast(115%) brightness(90%);
-    transition: filter 0.3s ease;
-  }
-  .map-container iframe:hover{
-    filter: invert(95%) hue-rotate(180deg) contrast(120%) brightness(100%);
   }
 
   .gallery-section{
@@ -439,10 +426,9 @@
         </div>
       </div>
 
-      <!-- MAPA INTEGRADO EN MODO OSCURO -->
+      <!-- MAPA CON MARCO Y ZOOM MÁS CERCANO -->
       <div class="map-container">
-        <div class="map-header">🗺️ Ubicación en el mapa</div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62471.4694847703!2d-77.05280163659343!3d-11.8725459854309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d0a19651a7d9%3A0x853c8eb4c9245091!2sADEM%20Ministerios!5e0!3m2!1ses-419!2spe!4v1790573899764!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000.4694847703!2d-77.05280163659343!3d-11.8725459854309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d0a19651a7d9%3A0x853c8eb4c9245091!2sADEM%20Ministerios!5e0!3m2!1ses-419!2spe!4v1790574577474!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
 
       <div class="gallery-section">
