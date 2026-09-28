@@ -6,11 +6,10 @@
 <title>Festival Familiar ADEM — Edición Primavera</title>
 
 <!-- INICIO DE ETIQUETAS PARA VISTA PREVIA DE WHATSAPP (Open Graph) -->
-<!-- IMPORTANTE: Reemplaza los enlaces de abajo con tus enlaces reales de GitHub Pages -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/invitacion.html" />
+<meta property="og:url" content="https://joshu4pa.github.io/invitacion-adem/invitacion.html" />
 <meta property="og:title" content="Festival Familiar ADEM - Edición Primavera 🌸" />
-<!-- IMPORTANTE: Sube tu imagen preview-invitacion.png a GitHub y pon el enlace directo aquí -->
+<meta property="og:description" content="Un evento especial para renovar fuerzas y compartir en familia. ¡Te esperamos con los brazos abiertos!" />
 <meta property="og:image" content="https://raw.githubusercontent.com/Joshu4PA/invitacion-adem/main/preview-invitacion.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -151,7 +150,6 @@
   .logo-wrap img{ 
     width:100%; height:100%; object-fit:contain; display:block;
   }
-  /* ---------------------------------------------------- */
 
   .eyebrow{
     font-family:'Baloo 2', sans-serif;
@@ -482,4 +480,18 @@
   });
 
   const confettiColors = ['#4ade80','#facc15','#fb923c','#f43f5e','#c084fc','#fde047'];
-  const wrap = document.
+  const wrap = document.getElementById('confettiWrap');
+  
+  function createConfetti() {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.left = Math.random() * 100 + 'vw';
+    c.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+    c.style.animationDuration = (Math.random() * 2 + 2.5) + 's';
+    wrap.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+  setInterval(createConfetti, 300);
+</script>
+</body>
+</html>
