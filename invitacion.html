@@ -5,12 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Festival Familiar ADEM — Edición Primavera</title>
 
-<!-- Etiquetas de vista previa para WhatsApp (Open Graph) -->
-<meta property="og:title" content="Festival Familiar ADEM 🌸 Edición Primavera">
-<meta property="og:description" content="Tienes una invitación especial para este 8 de octubre. Haz clic para ver los detalles y tu tarjeta personalizada.">
-<meta property="og:image" content="logo ico.png">
-<meta property="og:url" content="https://joshua1424a.github.io/invitacion-adem/">
-<meta property="og:type" content="website">
+<!-- INICIO DE ETIQUETAS PARA VISTA PREVIA DE WHATSAPP (Open Graph) -->
+<!-- IMPORTANTE: Reemplaza los enlaces de abajo con tus enlaces reales de GitHub Pages -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/invitacion.html" />
+<meta property="og:title" content="¡Estás invitado(a)! Festival Familiar ADEM - Edición Primavera 🌸" />
+<meta property="og:description" content="Un evento especial para renovar fuerzas y compartir en familia. ¡Te esperamos con los brazos abiertos!" />
+<!-- IMPORTANTE: Sube tu imagen preview-invitacion.png a GitHub y pon el enlace directo aquí -->
+<meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/preview-invitacion.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<!-- FIN DE ETIQUETAS PARA VISTA PREVIA DE WHATSAPP -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -135,7 +140,7 @@
     z-index:2; 
   }
 
-  /* ---------- LOGO ORIGINAL SIN MODIFICACIONES ---------- */
+  /* ---------- LOGO ORIGINAL CORREGIDO (SIN FONDO BLANCO) ---------- */
   .logo-wrap{
     width:100px; height:100px; margin:0 auto 10px;
     position:relative;
@@ -421,16 +426,16 @@
         <div class="gallery-container" id="galleryContainer">
           <div class="gallery-grid">
             <div class="gallery-item">
-              <img src="foto1.jpg">
+              <img src="foto1.jpg" alt="Festival Anterior 1">
             </div>
             <div class="gallery-item">
-              <img src="foto2.jpg">
+              <img src="foto2.jpg" alt="Festival Anterior 2">
             </div>
             <div class="gallery-item">
-              <img src="foto3.jpg">
+              <img src="foto3.jpg" alt="Festival Anterior 3">
             </div>
             <div class="gallery-item">
-              <img src="foto4.jpg">
+              <img src="foto4.jpg" alt="Festival Anterior 4">
             </div>
           </div>
           <div class="gallery-caption">Momentos inolvidables en familia 🌻</div>
@@ -478,24 +483,4 @@
   });
 
   const confettiColors = ['#4ade80','#facc15','#fb923c','#f43f5e','#c084fc','#fde047'];
-  const wrap = document.getElementById('confettiWrap');
-  function burst(count){
-    for(let i=0;i<count;i++){
-      const c = document.createElement('div');
-      c.className = 'confetti';
-      c.style.left = Math.random()*100+'vw';
-      c.style.background = confettiColors[Math.floor(Math.random()*confettiColors.length)];
-      c.style.animationDuration = (2.6+Math.random()*2)+'s';
-      c.style.width = (8+Math.random()*6)+'px';
-      c.style.height = (12+Math.random()*6)+'px';
-      c.style.animationDelay = (Math.random()*0.6)+'s';
-      wrap.appendChild(c);
-      setTimeout(()=>c.remove(), 5200);
-    }
-  }
-  burst(50);
-  setTimeout(()=>burst(25), 1200);
-</script>
-
-</body>
-</html>
+  const wrap = document.
