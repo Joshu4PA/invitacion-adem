@@ -116,12 +116,14 @@
       return;
     }
 
+    // Calcula la URL base actual apuntando a invitacion.html
     const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
     const invitacionUrl = baseUrl + 'invitacion.html?nombre=' + encodeURIComponent(input);
 
     document.getElementById('urlDisplay').textContent = invitacionUrl;
     
-    const mensajeWA = `¡Hola! ${input}, te compartimos una invitación especial para el Festival Familiar ADEM - Edición Primavera 🌸: ${invitacionUrl}`;
+    // MODIFICADO AQUÍ: El mensaje de WhatsApp ahora es SOLO la URL (sin texto extra)
+    const mensajeWA = invitacionUrl; 
     document.getElementById('waLink').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensajeWA)}`;
 
     document.getElementById('resultBox').style.display = 'block';
